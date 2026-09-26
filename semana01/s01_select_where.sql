@@ -95,8 +95,9 @@ where cantidad = 3 and precio_unit >= 45000;
 -- [x] 11. Productos que NO son de la categoría 1, con precio entre 25.000 y 50.000,
 --         ordenados por precio.
 --         Necesitas: <> , BETWEEN, ORDER BY   ✔ 5 filas, empieza en "Mascarilla de arcilla"
-select nombre, id_categoria, precio from productos
-where precio between 25000 and 50000
+select * from productos
+where id_categoria <> 1 
+and precio between 25000 and 50000
 order by precio;
 
 
