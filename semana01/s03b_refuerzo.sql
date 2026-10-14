@@ -185,6 +185,7 @@ SET search_path TO tienda;
 --         del ticket más alto al más bajo.
 --         ✔ Web = 131.086 ; Feria = 118.243
 SELECT p.canal, 
+COUNT(DISTINCT p.id_pedido) AS pedidos,
 ROUND(SUM(dp.cantidad * dp.precio_unit) / COUNT(DISTINCT p.id_pedido)) AS ticket_promedio
 FROM pedidos p
 LEFT JOIN detalle_pedido dp ON dp.id_pedido = p.id_pedido
@@ -244,14 +245,14 @@ WHERE NOT EXISTS (
 --         números distintos? creo que porque lineas cuenta tambien los pedidos con ID repetidos y 
 --                            pedidos se agrupan 
 --         ✔ Jabones: 1495 líneas, 1145 pedidos, 2931 unidades
-SELECT cat.nombre AS producto,
+SELECT cat.nombre AS categoria,
 COUNT(*) AS lineas,
 COUNT(DISTINCT dp.id_pedido) AS pedidos,
 SUM(dp.cantidad) AS unidades
 FROM detalle_pedido dp
 JOIN productos pr ON pr.id_producto = dp.id_producto 
 JOIN categorias cat ON cat.id_categoria = pr.id_categoria
-GROUP BY producto 
+GROUP BY categoria 
 ORDER BY pedidos DESC;
 
 
@@ -260,8 +261,7 @@ ORDER BY pedidos DESC;
 -- un ejemplo de las tablas mini en cada una (ej.: "como Diego, que...").
 --
 --   a) ¿Qué diferencia hay entre INNER JOIN y LEFT JOIN?
--- la diferencia es que uno me trae los valores nulos y el otro no, por ejemplo si un cliente
--- no tiene pedidos, el JOIN lo traerá como nulo.
+-- JOIN elimina a los que no tienen pareja (Diego no sale) y LEFT JOIN los conserva con NULL.
            
 --   b) En un LEFT JOIN, ¿por qué cambia el resultado si un filtro de la tabla
 --      derecha va en el WHERE en vez de en el ON?  (Pista: compara A2 y A3)

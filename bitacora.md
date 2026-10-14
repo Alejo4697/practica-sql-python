@@ -14,3 +14,18 @@
 - HackerRank: Weather Observation Station 4 (1 problema)
 - Horas reales: 4 horas
 - Nota: sesión del sábado hecha el lunes. Martes en la mañana haremos la sesión del lunes y en la noche la que corresponde a martes para empezar miercoles con su respectiva sesión. 
+
+## S3 · JOINs (INNER, LEFT, anti-join)
+- Ejercicios: solos (1-5, 7, 8, 10) · con pista (9, 11) · con solución (6, 12-15) · sin responder (16)
+- Lo que más me costó: elegir entre JOIN y LEFT JOIN, qué COUNT usar después de un JOIN, COALESCE y ROUND (no los conocía)
+- Decisión: hacer una sesión de refuerzo (3B) antes de seguir
+- HackerRank: no hice esta sesion
+- Horas reales: 4
+
+## S3B · Refuerzo JOINs y agregados (tablas mini)
+- Predicciones (parte A): 6/7 · fallé A2: olvidé que LEFT JOIN conserva a todos con NULL
+- Ejercicios: solos (B1-B6, C1, C2) · con pista (C3, C4) · con solución (B7, C5)
+- Lo que aprendí: regla JOIN vs LEFT JOIN ("¿necesito ver a los que no tienen pareja?"), COUNT(*) vs COUNT(col) vs COUNT(DISTINCT), COALESCE, ROUND, división entera
+- A mejorar: revisar que la consulta tenga todo lo que pide el enunciado; alias que digan lo que la columna es
+- HackerRank: no hice esta sesion
+- Horas reales: 4
