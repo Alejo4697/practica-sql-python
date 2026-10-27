@@ -29,3 +29,10 @@
 - A mejorar: revisar que la consulta tenga todo lo que pide el enunciado; alias que digan lo que la columna es
 - HackerRank: no hice esta sesion
 - Horas reales: 4
+
+## S4 · Subconsultas y CTEs
+- Predicciones: 5/5
+- Ejercicios: todos solos (B1-B5, C1-C6)
+- Aprendí: subconsulta escalar (comparar con el promedio), IN, NOT EXISTS, CTEs, trampa de NOT IN con NULL
+- A mejorar: precisión al explicar (NOT IN), AS en todos los alias
+- Horas reales: 4
